@@ -1,0 +1,36 @@
+name: myibd_app
+description: "A Flutter application for tracking IBD symptoms"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  
+  # Firebase
+  firebase_core: ^2.15.1
+  firebase_auth: ^4.7.3
+  cloud_firestore: ^4.8.5
+  
+  # UI & Utilities
+  intl: ^0.18.1
+  provider: ^6.0.5
+  fl_chart: ^0.63.0
+  shared_preferences: ^2.2.0
+
+  # PDF generation
+  pdf: ^3.10.7
+  path_provider: ^2.1.1
+  open_filex: ^4.3.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
