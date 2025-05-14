@@ -29,12 +29,15 @@
     </queries>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<<<<<<< HEAD
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+=======
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <permission
@@ -150,6 +153,7 @@
                     android:scheme="recaptcha" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
 
         <provider
             android:name="com.crazecoder.openfile.FileProvider"
@@ -160,6 +164,13 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider>
+=======
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:authorities="com.example.myibd_app.firebaseinitprovider"
@@ -167,11 +178,14 @@
             android:exported="false"
             android:initOrder="100" />
 
+<<<<<<< HEAD
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
+=======
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
         <uses-library
             android:name="androidx.window.extensions"
             android:required="false" />
@@ -188,9 +202,12 @@
             android:authorities="com.example.myibd_app.androidx-startup"
             android:exported="false" >
             <meta-data
+<<<<<<< HEAD
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"
                 android:value="androidx.startup" />
             <meta-data
+=======
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
                 android:name="androidx.lifecycle.ProcessLifecycleInitializer"
                 android:value="androidx.startup" />
             <meta-data

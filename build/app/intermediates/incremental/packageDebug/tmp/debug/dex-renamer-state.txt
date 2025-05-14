@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Wed May 14 15:55:57 PDT 2025
+=======
+#Wed May 14 13:51:26 PDT 2025
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
 base.0=C\:\\Users\\jason\\myibd_app\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\jason\\myibd_app\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\jason\\myibd_app\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

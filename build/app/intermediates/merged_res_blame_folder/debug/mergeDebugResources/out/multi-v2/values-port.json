@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "com.example.myibd_app-mergeDebugResources-46:/values-port/values-port.xml",
             "map": [
                 {
                     "source": "C:\\Users\\jason\\.gradle\\caches\\8.10.2\\transforms\\cdc1fd5a4f8cb18094ee01b408d70e6e\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
+=======
+            "outputFile": "com.example.myibd_app-mergeDebugResources-44:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jason\\.gradle\\caches\\8.10.2\\transforms\\8672542fff6e2103c63e7b98b328f638\\transformed\\appcompat-1.1.0\\res\\values-port\\values-port.xml",
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

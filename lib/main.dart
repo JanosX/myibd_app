@@ -13,8 +13,11 @@ import 'package:myibd_app/screens/symptom/symptom_form_screen.dart';
 import 'package:myibd_app/screens/symptom/symptom_history_screen.dart';
 import 'package:myibd_app/screens/insights/insights_screen.dart';
 import 'package:myibd_app/screens/medication/medicine_box_screen.dart';
+<<<<<<< HEAD
 import 'package:myibd_app/screens/reports/report_screen.dart';
 import 'package:myibd_app/screens/settings/settings_screen.dart';
+=======
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
 // Repository imports
 import 'package:myibd_app/repositories/bowel_repository.dart';
 import 'package:myibd_app/repositories/fluid_repository.dart';
@@ -23,12 +26,16 @@ import 'package:myibd_app/repositories/medication_repository.dart';
 import 'package:myibd_app/repositories/sleep_repository.dart';
 import 'package:myibd_app/repositories/symptom_repository.dart';
 import 'package:myibd_app/repositories/flare_repository.dart';
+<<<<<<< HEAD
 import 'package:myibd_app/repositories/user_repository.dart';
+=======
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
 
 void main() {
   runApp(const MyIBDApp());
 }
 
+<<<<<<< HEAD
 class MyIBDApp extends StatefulWidget {
   const MyIBDApp({super.key});
 
@@ -65,6 +72,12 @@ class _MyIBDAppState extends State<MyIBDApp> {
   }
 
   @override
+=======
+class MyIBDApp extends StatelessWidget {
+  const MyIBDApp({super.key});
+
+  @override
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'MyIBD',
@@ -72,6 +85,7 @@ class _MyIBDAppState extends State<MyIBDApp> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
+<<<<<<< HEAD
       darkTheme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.blue,
@@ -80,6 +94,8 @@ class _MyIBDAppState extends State<MyIBDApp> {
         useMaterial3: true,
       ),
       themeMode: _themeMode,
+=======
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
       home: const DashboardScreen(),
     );
   }
@@ -316,9 +332,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
               title: const Text('Settings'),
               onTap: () {
                 Navigator.pop(context);
+<<<<<<< HEAD
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const SettingsScreen()),
+=======
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Settings coming soon')),
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
                 );
               },
             ),

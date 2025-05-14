@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // lib/screens/reports/report_screen.dart
+=======
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:open_filex/open_filex.dart';
@@ -229,6 +232,10 @@ class _ReportScreenState extends State<ReportScreen> {
             // Report contents
             Card(
               child: Padding(
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -246,6 +253,7 @@ class _ReportScreenState extends State<ReportScreen> {
                     _buildContentItem(Icons.restaurant, 'Food Entries'),
                     _buildContentItem(Icons.medication, 'Medications'),
                     _buildContentItem(Icons.bedtime, 'Sleep Records'),
+<<<<<<< HEAD
                     _buildContentItem(Icons.warning_amber, 'Symptoms'),
                     _buildContentItem(Icons.analytics, 'Summary Statistics'),
                   ],
@@ -299,3 +307,6 @@ class _ReportScreenState extends State<ReportScreen> {
     );
   }
 }
+=======
+                    _buildContentItem(
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56

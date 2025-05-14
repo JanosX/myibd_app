@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // lib/services/report_generator.dart
+=======
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
 import 'dart:io';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -589,6 +592,7 @@ class ReportGenerator {
     );
   }
 
+<<<<<<< HEAD
   static String _getSeverityLabel(int severity) {
     switch (severity) {
       case 1:
@@ -646,3 +650,6 @@ class ReportGenerator {
     }
   }
 }
+=======
+  static
+>>>>>>> 50cd30078ec614638f7b8b59bccf678773d84f56
