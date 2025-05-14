@@ -1,3 +1,4 @@
+// lib/screens/reports/report_screen.dart
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:open_filex/open_filex.dart';
@@ -228,7 +229,6 @@ class _ReportScreenState extends State<ReportScreen> {
             // Report contents
             Card(
               child: Padding(
-            
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -246,4 +246,56 @@ class _ReportScreenState extends State<ReportScreen> {
                     _buildContentItem(Icons.restaurant, 'Food Entries'),
                     _buildContentItem(Icons.medication, 'Medications'),
                     _buildContentItem(Icons.bedtime, 'Sleep Records'),
-                    _buildContentItem(
+                    _buildContentItem(Icons.warning_amber, 'Symptoms'),
+                    _buildContentItem(Icons.analytics, 'Summary Statistics'),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 32),
+            
+            // Generate button
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                onPressed: _isGenerating ? null : _generateReport,
+                icon: _isGenerating
+                    ? const SizedBox(
+                        width: 20,
+                        height: 20,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 2,
+                          color: Colors.white,
+                        ),
+                      )
+                    : const Icon(Icons.picture_as_pdf),
+                label: Text(_isGenerating ? 'Generating...' : 'Generate Report'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildContentItem(IconData icon, String text) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      child: Row(
+        children: [
+          Icon(icon, size: 20, color: Colors.grey.shade700),
+          const SizedBox(width: 12),
+          Text(text, style: const TextStyle(fontSize: 16)),
+        ],
+      ),
+    );
+  }
+}

@@ -13,6 +13,8 @@ import 'package:myibd_app/screens/symptom/symptom_form_screen.dart';
 import 'package:myibd_app/screens/symptom/symptom_history_screen.dart';
 import 'package:myibd_app/screens/insights/insights_screen.dart';
 import 'package:myibd_app/screens/medication/medicine_box_screen.dart';
+import 'package:myibd_app/screens/reports/report_screen.dart';
+import 'package:myibd_app/screens/settings/settings_screen.dart';
 // Repository imports
 import 'package:myibd_app/repositories/bowel_repository.dart';
 import 'package:myibd_app/repositories/fluid_repository.dart';
@@ -21,13 +23,46 @@ import 'package:myibd_app/repositories/medication_repository.dart';
 import 'package:myibd_app/repositories/sleep_repository.dart';
 import 'package:myibd_app/repositories/symptom_repository.dart';
 import 'package:myibd_app/repositories/flare_repository.dart';
+import 'package:myibd_app/repositories/user_repository.dart';
 
 void main() {
   runApp(const MyIBDApp());
 }
 
-class MyIBDApp extends StatelessWidget {
+class MyIBDApp extends StatefulWidget {
   const MyIBDApp({super.key});
+
+  @override
+  State<MyIBDApp> createState() => _MyIBDAppState();
+}
+
+class _MyIBDAppState extends State<MyIBDApp> {
+  final _userRepository = UserRepository();
+  ThemeMode _themeMode = ThemeMode.system;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadThemePreference();
+  }
+
+  Future<void> _loadThemePreference() async {
+    final profile = await _userRepository.getCurrentUser();
+    if (profile != null) {
+      setState(() {
+        switch (profile.preferences.themeMode) {
+          case 'light':
+            _themeMode = ThemeMode.light;
+            break;
+          case 'dark':
+            _themeMode = ThemeMode.dark;
+            break;
+          default:
+            _themeMode = ThemeMode.system;
+        }
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +72,14 @@ class MyIBDApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
+      darkTheme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+          brightness: Brightness.dark,
+        ),
+        useMaterial3: true,
+      ),
+      themeMode: _themeMode,
       home: const DashboardScreen(),
     );
   }
@@ -273,8 +316,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
               title: const Text('Settings'),
               onTap: () {
                 Navigator.pop(context);
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Settings coming soon')),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SettingsScreen()),
                 );
               },
             ),

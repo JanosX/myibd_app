@@ -1,3 +1,4 @@
+// lib/services/report_generator.dart
 import 'dart:io';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -588,4 +589,60 @@ class ReportGenerator {
     );
   }
 
-  static
+  static String _getSeverityLabel(int severity) {
+    switch (severity) {
+      case 1:
+        return 'Mild';
+      case 2:
+        return 'Moderate';
+      case 3:
+        return 'Significant';
+      case 4:
+        return 'Severe';
+      case 5:
+        return 'Very Severe';
+      default:
+        return 'Unknown';
+    }
+  }
+
+  static String _getRouteString(String route) {
+    switch (route) {
+      case 'oral':
+        return 'By mouth';
+      case 'injection':
+        return 'Injection';
+      case 'topical':
+        return 'On skin';
+      case 'inhaled':
+        return 'Inhaled';
+      case 'eye_drops':
+        return 'Eye drops';
+      case 'ear_drops':
+        return 'Ear drops';
+      case 'nasal':
+        return 'Nasal spray';
+      case 'rectal':
+        return 'Rectal';
+      case 'sublingual':
+        return 'Under tongue';
+      case 'patch':
+        return 'Skin patch';
+      default:
+        return route;
+    }
+  }
+
+  static String _getTypeString(MedicationType type) {
+    switch (type) {
+      case MedicationType.prescription:
+        return 'Prescription';
+      case MedicationType.natural:
+        return 'Natural';
+      case MedicationType.custom:
+        return 'Custom';
+      case MedicationType.medicineBox:
+        return 'Medicine Box';
+    }
+  }
+}
